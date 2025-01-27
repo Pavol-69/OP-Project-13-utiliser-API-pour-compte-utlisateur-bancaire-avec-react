@@ -1,0 +1,11 @@
+@use "../variables.scss" as *;
+
+footer {
+  /*Dimensions*/
+  width: 100%;
+
+  /*Style*/
+  border-top: 2px solid #ccc;
+  padding: 2rem 0 1.5rem;
+  background-color: $wht;
+}
