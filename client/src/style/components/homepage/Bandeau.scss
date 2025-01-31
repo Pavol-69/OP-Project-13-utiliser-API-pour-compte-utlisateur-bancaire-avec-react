@@ -1,0 +1,75 @@
+@use "../../variables.scss" as *;
+
+.hero {
+  /*Position*/
+  position: relative;
+
+  /*Dimensions*/
+  height: 300px;
+  width: 100%;
+
+  /*Image*/
+  background-image: url("../../../assets/bank-tree.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0px -50px;
+}
+
+.hero-ctn {
+  /*Position*/
+  position: relative;
+  top: 2rem;
+  right: 0px;
+
+  /*Dimensions*/
+  width: 200px;
+  margin: 0px auto;
+
+  padding: 2rem;
+
+  /*Texte*/
+  text-align: left;
+
+  /*Style*/
+  background-color: $wht;
+}
+
+.hero-ctn .subtitle {
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 0px;
+}
+
+.hero-ctn .text {
+  margin-bottom: 0px;
+  font-size: 0.9rem;
+}
+
+@media (min-width: $big-size) {
+  .hero {
+    /*Dimensions*/
+    height: 400px;
+
+    /*Image*/
+    background-position: 0% 33%;
+  }
+
+  .hero-ctn {
+    /*Position*/
+    position: absolute;
+    top: 50px;
+    right: 50px;
+
+    /*Dimensions*/
+    width: 300px;
+    margin: 2rem;
+  }
+
+  .hero-ctn .subtitle {
+    font-size: 1.5rem;
+  }
+
+  .hero-ctn .text {
+    font-size: 1.2rem;
+  }
+}

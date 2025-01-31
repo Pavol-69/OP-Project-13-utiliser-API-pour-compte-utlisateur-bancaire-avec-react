@@ -1,0 +1,78 @@
+@use "../../variables.scss" as *;
+
+.sign-in-content {
+  /*Dimensions*/
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 3rem;
+  padding: 2rem;
+  box-sizing: border-box;
+
+  /*Style*/
+  background-color: white;
+}
+
+.sign-in-content h1 {
+  /*Texte*/
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+}
+
+.input-wrapper {
+  /*Position*/
+  margin-bottom: 1rem;
+
+  /*Display*/
+  display: flex;
+  flex-direction: column;
+
+  /*Texte*/
+  text-align: left;
+}
+
+.input-wrapper label {
+  /*Texte*/
+  font-weight: bold;
+}
+
+.input-wrapper input {
+  /*Dimensions*/
+  padding: 5px;
+
+  /*Texte*/
+  font-size: 1.2rem;
+}
+
+.input-remember {
+  /*Display*/
+  display: flex;
+}
+
+.input-remember label {
+  /*Position*/
+  margin-left: 0.25rem;
+}
+
+.sign-in-button {
+  /*Position*/
+  margin-top: 1rem;
+
+  /*Dimensions*/
+  width: 100%;
+  padding: 8px;
+
+  /*Display*/
+  display: block;
+
+  /*Texte*/
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: underline;
+
+  /*Style*/
+  border: 0;
+  background-color: $prm;
+  cursor: pointer;
+}

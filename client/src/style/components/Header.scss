@@ -18,6 +18,11 @@ header {
   background-color: $wht;
 }
 
+.a-logo {
+  /*Pour éviter les 4px de trop*/
+  font-size: 0;
+}
+
 header img {
   /*Dimensions*/
   max-width: 100%;

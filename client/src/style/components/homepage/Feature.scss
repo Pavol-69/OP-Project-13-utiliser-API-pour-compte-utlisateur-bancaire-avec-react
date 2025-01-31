@@ -1,0 +1,30 @@
+@use "../../variables.scss" as *;
+
+.feature-item {
+  /*Dimensions*/
+  padding: 2.5rem;
+
+  /*Display*/
+  align-items: center;
+  flex: 1;
+}
+
+.feature-icon {
+  /*Dimensions*/
+  width: 100px;
+  padding: 1rem;
+
+  /*Style*/
+  border: 10px solid $prm;
+  border-radius: 50%;
+}
+
+.feature-item-title {
+  /*Dimensions*/
+  margin-bottom: 0.5rem;
+
+  /*Texte*/
+  color: #222;
+  font-size: 1.25rem;
+  font-weight: bold;
+}

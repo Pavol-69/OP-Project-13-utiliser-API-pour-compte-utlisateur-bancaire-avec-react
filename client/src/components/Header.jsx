@@ -13,7 +13,7 @@ import { faCircleUser } from "@fortawesome/free-solid-svg-icons";
 function Header() {
   return (
     <header>
-      <Link to={"/"}>
+      <Link to={"/"} className="a-logo">
         <img src={logo} />
       </Link>
       <Link to={"/sign-in"} className="elt-ct hor link">

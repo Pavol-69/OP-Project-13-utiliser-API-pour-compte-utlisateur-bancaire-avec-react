@@ -1,6 +1,7 @@
 // Components
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import SignInForm from "../components/signinpage/SignInForm";
 
 // Style
 import "../style/generalCSS.scss";
@@ -10,10 +11,9 @@ function SignInPage({ bgCol }) {
   return (
     <>
       <Header />
-      <main
-        className="elm-ct ver main-ctn"
-        style={{ backgroundColor: bgCol }}
-      ></main>
+      <main className="main-ctn" style={{ backgroundColor: bgCol }}>
+        <SignInForm />
+      </main>
       <Footer />
     </>
   );

@@ -1,15 +1,5 @@
 @use "./variables.scss" as *;
 
-h1,
-h2,
-h3,
-h4,
-h5,
-ul {
-  /*Dimensions*/
-  margin: 0;
-}
-
 .elm-ct {
   /*Display*/
   display: flex;
@@ -31,10 +21,28 @@ ul {
   /*Dimensions*/
   height: 100%;
   width: 100%;
+
+  /*Display*/
   flex: 1;
 }
 
 .link {
   /*Style*/
   text-decoration: none;
+}
+
+.sr-only {
+  /*Position*/
+  position: absolute;
+
+  /*Dimensions*/
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+
+  /*Style*/
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }

@@ -4,8 +4,8 @@ import "../style/components/Footer.scss";
 
 function Footer() {
   return (
-    <footer className="elm-ct">
-      <p>Copyright 2020 Argent Bank</p>
+    <footer>
+      <p className="footer-text">Copyright 2020 Argent Bank</p>
     </footer>
   );
 }

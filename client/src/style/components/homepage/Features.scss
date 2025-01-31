@@ -1,0 +1,14 @@
+@use "../../variables.scss" as *;
+
+.features {
+  /*Display*/
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: $big-size) {
+  .features {
+    /*Display*/
+    flex-direction: row;
+  }
+}
