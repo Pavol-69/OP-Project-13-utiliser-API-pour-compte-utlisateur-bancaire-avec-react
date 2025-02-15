@@ -1,15 +1,14 @@
 import HomePage from "./pages/HomePage";
 import SignInPage from "./pages/SignInPage";
-
-import { store } from "./store/store";
-
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Provider } from "react-redux";
-
+import UserPage from "./pages/UserPage";
 import PublicRoute from "./routes/PublicRoute";
 import PrivateRoute from "./routes/PrivateRoute";
 import AuthRoute from "./routes/AuthRoute";
+
+import { store } from "./store/store";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Provider } from "react-redux";
 
 function App() {
   return (
@@ -30,8 +29,8 @@ function App() {
               </Route>
               <Route path="/" element={<PrivateRoute />}>
                 <Route
-                  path="/toto"
-                  element={<HomePage bgCol={"rgba(255, 255, 255, 1)"} />}
+                  path="/user"
+                  element={<UserPage bgCol={"rgba(18, 0, 43, 1)"} />}
                 />
               </Route>
             </Route>
