@@ -4,7 +4,7 @@ const { restart } = require("nodemon");
 module.exports.validateToken = (req, res, next) => {
   let response = {};
   // RECONNAIT PAS LE TOKEN
-  console.log(req.headers.token);
+  console.log("token", req.headers.token);
 
   try {
     if (!req.headers.authorization) {
@@ -12,6 +12,7 @@ module.exports.validateToken = (req, res, next) => {
     }
 
     const userToken = req.headers.authorization.split("Bearer")[1].trim();
+
     const decodedToken = jwt.verify(
       userToken,
       process.env.SECRET_KEY || "default-secret-key"

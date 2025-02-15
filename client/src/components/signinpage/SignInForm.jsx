@@ -3,7 +3,7 @@ import "../../style/components/signinpage/SignInForm.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleUser } from "@fortawesome/free-solid-svg-icons";
 import { useDispatch } from "react-redux";
-import { signIn } from "../../store/slices/authSlice";
+import { signIn } from "../../store/slices/apiSlice";
 import { useState } from "react";
 
 function SignIn() {

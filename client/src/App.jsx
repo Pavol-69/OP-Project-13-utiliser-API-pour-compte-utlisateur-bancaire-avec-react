@@ -7,20 +7,34 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Provider } from "react-redux";
 
+import PublicRoute from "./routes/PublicRoute";
+import PrivateRoute from "./routes/PrivateRoute";
+import AuthRoute from "./routes/AuthRoute";
+
 function App() {
   return (
     <Provider store={store}>
       <React.StrictMode>
         <Router>
           <Routes>
-            <Route
-              path="/"
-              element={<HomePage bgCol={"rgba(255, 255, 255, 1)"} />}
-            />
-            <Route
-              path="/sign-in"
-              element={<SignInPage bgCol={"rgba(18, 0, 43, 1)"} />}
-            />
+            <Route path="/" element={<AuthRoute />}>
+              <Route
+                path="/"
+                element={<HomePage bgCol={"rgba(255, 255, 255, 1)"} />}
+              />
+              <Route path="/" element={<PublicRoute />}>
+                <Route
+                  path="/sign-in"
+                  element={<SignInPage bgCol={"rgba(18, 0, 43, 1)"} />}
+                />
+              </Route>
+              <Route path="/" element={<PrivateRoute />}>
+                <Route
+                  path="/toto"
+                  element={<HomePage bgCol={"rgba(255, 255, 255, 1)"} />}
+                />
+              </Route>
+            </Route>
           </Routes>
         </Router>
       </React.StrictMode>
