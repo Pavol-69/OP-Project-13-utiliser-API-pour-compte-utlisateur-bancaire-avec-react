@@ -2,7 +2,7 @@ import { Outlet, Navigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 function PublicRoute() {
-  const isAuth = useSelector((state) => state.auth);
+  const isAuth = useSelector((state) => state.user.auth);
 
   return !isAuth ? <Outlet /> : <Navigate to="/" />;
 }

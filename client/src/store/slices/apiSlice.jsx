@@ -1,6 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { userSlice } from "./userSlice";
-import { authSlice } from "./authSlice";
 import axios from "axios";
 
 export const signIn = createAsyncThunk(
@@ -46,7 +45,7 @@ export const getUserInfo = createAsyncThunk(
       const parseRes = await response.data.body;
 
       thunkApi.dispatch(userSlice.actions.saveUserInfo(parseRes));
-      thunkApi.dispatch(authSlice.actions.userAuth(true));
+      thunkApi.dispatch(userSlice.actions.userAuth(true));
       return thunkApi.fulfillWithValue("User identified");
     } catch (err) {
       return thunkApi.rejectWithValue(err.response?.data || "Connexion error");

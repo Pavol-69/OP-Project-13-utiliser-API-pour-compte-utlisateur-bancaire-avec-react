@@ -1,20 +1,13 @@
-@use "../variables.scss" as *;
+@use "../../variables.scss" as *;
 
 header {
-  /*Dimensions*/
   width: 100%;
   padding: 5px 20px;
   box-sizing: border-box;
-
-  /*Display*/
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  /*Texte*/
   color: $blk;
-
-  /*Style*/
   background-color: $wht;
 }
 
@@ -24,19 +17,6 @@ header {
 }
 
 header img {
-  /*Dimensions*/
   max-width: 100%;
   width: 200px;
-}
-
-header .link {
-  /*Position*/
-  margin-right: 0.5rem;
-
-  /*Dimenions*/
-  height: auto;
-
-  /*Texte*/
-  color: $blk;
-  font-weight: bold;
 }

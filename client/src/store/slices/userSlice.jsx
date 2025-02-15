@@ -5,11 +5,19 @@ export const userSlice = createSlice({
   initialState: {},
   reducers: {
     saveUserInfo: (currentState, action) => {
-      const stateWithNewUserInfo = { ...currentState, user: action.payload };
+      const stateWithNewUserInfo = {
+        ...action.payload,
+        auth: currentState.auth,
+      };
       return stateWithNewUserInfo;
     },
-    cleanUserInfo: (currentState) => {
-      const stateWithNoUserInfo = { ...currentState, user: {} };
+    userAuth: (currentState, action) => {
+      const stateWithNewUserAuth = { ...currentState, auth: action.payload };
+      return stateWithNewUserAuth;
+    },
+    userSignOut: () => {
+      const stateWithNoUserInfo = { ...{}, auth: false };
+      localStorage.removeItem("token");
       return stateWithNoUserInfo;
     },
   },

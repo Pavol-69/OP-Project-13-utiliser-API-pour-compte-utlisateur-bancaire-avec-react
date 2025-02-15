@@ -1,0 +1,13 @@
+@use "../../variables.scss" as *;
+
+.link_btn {
+  margin-right: 0.5rem;
+  height: auto;
+  color: $blk;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.link_btn:hover span {
+  text-decoration: underline;
+}

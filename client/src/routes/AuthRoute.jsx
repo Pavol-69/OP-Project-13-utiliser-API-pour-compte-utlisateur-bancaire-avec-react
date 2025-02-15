@@ -4,7 +4,7 @@ import { getUserInfo } from "../store/slices/apiSlice";
 import { useEffect, useState } from "react";
 
 function AuthRoute() {
-  const isAuth = useSelector((state) => state.auth);
+  const isAuth = useSelector((state) => state.user.auth);
   const [pending, setPending] = useState(true);
   const dispatch = useDispatch();
 

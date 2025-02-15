@@ -1,9 +1,6 @@
-// Components
-import Header from "../components/Header";
+import Header from "../components/header/Header";
 import Footer from "../components/Footer";
 import SignInForm from "../components/signinpage/SignInForm";
-
-// Style
 import "../style/generalCSS.scss";
 import "../style/pages/HomePage.scss";
 
