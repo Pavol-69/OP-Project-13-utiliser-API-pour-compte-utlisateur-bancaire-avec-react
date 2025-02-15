@@ -53,6 +53,27 @@ export const getUserInfo = createAsyncThunk(
   }
 );
 
+export const updateUserInfo = createAsyncThunk(
+  "user/updateInfo",
+  async ({ info }, thunkApi) => {
+    try {
+      const response = await axios({
+        method: "put",
+        url: "http://localhost:3001/api/v1/user/profile",
+        headers: { authorization: `Bearer ${info.token}` },
+        data: { firstName: info.firstName, lastName: info.lastName },
+      });
+
+      const parseRes = await response.data.body;
+
+      thunkApi.dispatch(userSlice.actions.saveUserInfo(parseRes));
+      return thunkApi.fulfillWithValue("User info updated");
+    } catch (err) {
+      return thunkApi.rejectWithValue(err.response?.data || "Connexion error");
+    }
+  }
+);
+
 export const apiSlice = createSlice({
   name: "api",
   initialState: {},
@@ -68,6 +89,12 @@ export const apiSlice = createSlice({
       console.log(action.payload);
     });
     builder.addCase(getUserInfo.rejected, (state, action) => {
+      console.error(action.payload);
+    });
+    builder.addCase(updateUserInfo.fulfilled, (state, action) => {
+      console.log(action.payload);
+    });
+    builder.addCase(updateUserInfo.rejected, (state, action) => {
       console.error(action.payload);
     });
   },

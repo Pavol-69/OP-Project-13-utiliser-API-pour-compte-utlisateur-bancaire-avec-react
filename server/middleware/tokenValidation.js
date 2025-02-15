@@ -3,8 +3,6 @@ const { restart } = require("nodemon");
 
 module.exports.validateToken = (req, res, next) => {
   let response = {};
-  // RECONNAIT PAS LE TOKEN
-  console.log("token", req.headers.token);
 
   try {
     if (!req.headers.authorization) {

@@ -1,0 +1,27 @@
+@use "../../variables.scss" as *;
+
+.form-ctn {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(10px);
+}
+
+.form-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: $wht;
+  opacity: 0.8;
+}
+
+.user-form {
+  position: absolute;
+  padding: 30px;
+  border: solid 1px $blk;
+  background-color: $wht;
+}
+
+.btn-ctn {
+  gap: 20px;
+}

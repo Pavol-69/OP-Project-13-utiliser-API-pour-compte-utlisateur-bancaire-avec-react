@@ -36,6 +36,7 @@ function SignIn() {
             type="text"
             id="email"
             onChange={(e) => handleOnChange(e)}
+            value={user.email}
           ></input>
         </div>
         <div className="input-wrapper">
@@ -44,6 +45,7 @@ function SignIn() {
             type="password"
             id="password"
             onChange={(e) => handleOnChange(e)}
+            value={user.password}
           ></input>
         </div>
         <div className="input-remember">

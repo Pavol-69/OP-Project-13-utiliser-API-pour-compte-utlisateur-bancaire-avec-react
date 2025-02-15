@@ -19,31 +19,6 @@
   margin-block-end: 0.83em;
 }
 
-.input-wrapper {
-  /*Position*/
-  margin-bottom: 1rem;
-
-  /*Display*/
-  display: flex;
-  flex-direction: column;
-
-  /*Texte*/
-  text-align: left;
-}
-
-.input-wrapper label {
-  /*Texte*/
-  font-weight: bold;
-}
-
-.input-wrapper input {
-  /*Dimensions*/
-  padding: 5px;
-
-  /*Texte*/
-  font-size: 1.2rem;
-}
-
 .input-remember {
   /*Display*/
   display: flex;
