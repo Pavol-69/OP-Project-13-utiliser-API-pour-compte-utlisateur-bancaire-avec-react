@@ -23,13 +23,13 @@ function App() {
               />
               <Route path="/" element={<PublicRoute />}>
                 <Route
-                  path="/sign-in"
+                  path="/login"
                   element={<SignInPage bgCol={"rgba(18, 0, 43, 1)"} />}
                 />
               </Route>
               <Route path="/" element={<PrivateRoute />}>
                 <Route
-                  path="/user"
+                  path="/profile"
                   element={<UserPage bgCol={"rgba(18, 0, 43, 1)"} />}
                 />
               </Route>

@@ -5,6 +5,8 @@ import UserUpdateForm from "../components/userpage/UserUpdateform";
 import "../style/generalCSS.scss";
 import "../style/pages/HomePage.scss";
 import { useState } from "react";
+import { accounts } from "../components/userpage/AccountsMock";
+import Account from "../components/userpage/Account";
 
 function UserPage({ bgCol }) {
   const [displayUserForm, setDisplayUserForm] = useState(false);
@@ -13,6 +15,11 @@ function UserPage({ bgCol }) {
       <Header />
       <main className="main-ctn" style={{ backgroundColor: bgCol }}>
         <UserBanner setDisplayUserForm={setDisplayUserForm} />
+        <div className="account-ctn">
+          {accounts.map((account, index) => (
+            <Account key={index} account={account} />
+          ))}
+        </div>
       </main>
       <Footer />
       {displayUserForm ? (

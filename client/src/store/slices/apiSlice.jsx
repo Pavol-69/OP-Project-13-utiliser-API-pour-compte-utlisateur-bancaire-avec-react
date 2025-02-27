@@ -11,14 +11,14 @@ export const signIn = createAsyncThunk(
         .unwrap();
 
       if (res.token) {
-        localStorage.setItem("token", res.token);
+        sessionStorage.setItem("token", res.token);
         await thunkApi.dispatch(getUserInfo(res.token));
         return thunkApi.fulfillWithValue("Connexion success");
       } else {
         return thunkApi.rejectWithValue("Connexion error");
       }
     } catch (err) {
-      return thunkApi.rejectWithValue(err.response?.data || "Connexion error");
+      return thunkApi.rejectWithValue(err.data.message);
     }
   }
 );
@@ -35,7 +35,7 @@ export const getUserInfo = createAsyncThunk(
       thunkApi.dispatch(userSlice.actions.userAuth(true));
       return thunkApi.fulfillWithValue("User identified");
     } catch (err) {
-      return thunkApi.rejectWithValue(err.response?.data || "Connexion error");
+      return thunkApi.rejectWithValue(err.data.message);
     }
   }
 );
@@ -51,7 +51,7 @@ export const updateUserInfo = createAsyncThunk(
       thunkApi.dispatch(userSlice.actions.saveUserInfo(res));
       return thunkApi.fulfillWithValue("User info updated");
     } catch (err) {
-      return thunkApi.rejectWithValue(err.response?.data || "Connexion error");
+      return thunkApi.rejectWithValue(err.data.message);
     }
   }
 );

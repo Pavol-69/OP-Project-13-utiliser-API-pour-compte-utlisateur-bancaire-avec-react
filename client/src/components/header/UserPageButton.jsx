@@ -8,7 +8,7 @@ import { useSelector } from "react-redux";
 function UserPageButton() {
   const { firstName } = useSelector((state) => state.user);
   return (
-    <Link to={"/user"} className="elt-ct hor link link_btn">
+    <Link to={"/profile"} className="elt-ct hor link link_btn">
       <FontAwesomeIcon
         icon={faCircleUser}
         style={{

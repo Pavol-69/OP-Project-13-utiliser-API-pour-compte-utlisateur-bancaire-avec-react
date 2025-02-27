@@ -62,12 +62,12 @@ paths:
         - Bearer: []
         
   
-  /transaction/add/{accountId}:
+  /api/v1/user/transaction/add/{accountId}:
     post:
       tags:
         - transaction
       summary: Add a new transaction
-      description: Add a new transactionin the account corresponding to the id
+      description: Add a new transaction in the account corresponding to the id
       operationId: addTransaction
       parameters:
         - name: Authorization
@@ -86,7 +86,7 @@ paths:
             format: int64
       responses:
         '200':
-          description: transactyion successfully added
+          description: transaction successfully added
           content:
             application/json:
               schema:
@@ -101,7 +101,7 @@ paths:
 
 
 
-  /transaction/{transactionId}:
+  /api/v1/user/transaction/{transactionId}:
     get:
       tags:
         - transaction
@@ -140,7 +140,7 @@ paths:
       tags:
         - transaction
       summary: Updates a transaction with form data
-      description: Update a transaction with form data, we can only update the description
+      description: Update a transaction with form data
       operationId: updateTransaction
       parameters:
         - name: Authorization

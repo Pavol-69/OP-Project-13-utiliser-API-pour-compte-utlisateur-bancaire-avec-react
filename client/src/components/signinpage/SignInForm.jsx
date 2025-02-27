@@ -10,14 +10,23 @@ function SignIn() {
   const dispatch = useDispatch();
 
   const [user, setUser] = useState({ email: "", password: "" });
+  const [showModal, setShowModal] = useState(false);
 
   async function handleSignInForm(e) {
     e.preventDefault();
-    dispatch(signIn({ user }));
+    const apiRes = await dispatch(signIn({ user }));
+    if (apiRes.payload == "Error: User not found!") {
+      setShowModal(true);
+    }
   }
 
   function handleOnChange(e) {
     setUser({ ...user, [e.target.id]: e.target.value });
+  }
+
+  function closeModal(e) {
+    e.preventDefault();
+    setShowModal(false);
   }
 
   return (
@@ -54,6 +63,19 @@ function SignIn() {
         </div>
         <button className="sign-in-button">Sign In</button>
       </form>
+      {showModal ? (
+        <div className="modal-ctn elm-ct">
+          <form
+            className="modal-form elm-ct ver"
+            onSubmit={(e) => closeModal(e)}
+          >
+            <h4>Id or password incorrect.</h4>
+            <button className="sign-in-button" onClick={(e) => closeModal(e)}>
+              OK
+            </button>
+          </form>
+        </div>
+      ) : null}
     </div>
   );
 }

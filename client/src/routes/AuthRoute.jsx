@@ -9,8 +9,8 @@ function AuthRoute() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (!isAuth && localStorage.token) {
-      dispatch(getUserInfo(localStorage.token)).then(() => {
+    if (!isAuth && sessionStorage.token) {
+      dispatch(getUserInfo(sessionStorage.token)).then(() => {
         setPending(false);
       });
     } else {

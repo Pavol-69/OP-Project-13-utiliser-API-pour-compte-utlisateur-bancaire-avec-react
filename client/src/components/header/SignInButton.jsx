@@ -6,7 +6,7 @@ import { faCircleUser } from "@fortawesome/free-solid-svg-icons";
 
 function SignInButton() {
   return (
-    <Link to={"/sign-in"} className="elt-ct hor link link_btn">
+    <Link to={"/login"} className="elt-ct hor link link_btn">
       <FontAwesomeIcon
         icon={faCircleUser}
         style={{

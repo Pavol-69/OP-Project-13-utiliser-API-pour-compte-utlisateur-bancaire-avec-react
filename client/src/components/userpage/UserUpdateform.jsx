@@ -20,7 +20,7 @@ function UserUpdateForm({ setDisplayUserForm }) {
         info: {
           firstName: info.firstName,
           lastName: info.lastName,
-          token: localStorage.token,
+          token: sessionStorage.token,
         },
       })
     );
@@ -40,7 +40,7 @@ function UserUpdateForm({ setDisplayUserForm }) {
     <div className="form-ctn elm-ct">
       <div className="form-bg"></div>
       <form className="user-form elm-ct ver" onSubmit={(e) => handleSubmit(e)}>
-        <h1>User informations update</h1>
+        <h4>User informations update</h4>
         <div className="input-wrapper">
           <label htmlFor="firstName">First name</label>
           <input
