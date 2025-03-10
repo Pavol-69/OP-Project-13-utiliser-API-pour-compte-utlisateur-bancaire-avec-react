@@ -5,7 +5,7 @@ import { faSignOut } from "@fortawesome/free-solid-svg-icons";
 import { useDispatch } from "react-redux";
 import { userSlice } from "../../store/slices/userSlice";
 
-function SignInButton() {
+function SignOutButton() {
   const dispatch = useDispatch();
   return (
     <div
@@ -24,4 +24,4 @@ function SignInButton() {
   );
 }
 
-export default SignInButton;
+export default SignOutButton;

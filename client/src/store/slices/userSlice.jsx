@@ -17,7 +17,7 @@ export const userSlice = createSlice({
     },
     userSignOut: () => {
       const stateWithNoUserInfo = { ...{}, auth: false };
-      localStorage.removeItem("token");
+      sessionStorage.removeItem("token");
       return stateWithNoUserInfo;
     },
   },
